@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+
+  - name: ecommerce
+
+    database: ECOMMERCE_DB
+
+    schema: PUBLIC
+
+    tables:
+
+      - name: CUSTOMER_REVENUE
+
+      - name: PRODUCT_SALES
+
+      - name: DAILY_REVENUE
