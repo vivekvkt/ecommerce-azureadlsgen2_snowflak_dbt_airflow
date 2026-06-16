@@ -20,7 +20,7 @@ df.writeStream
 .format("delta")
 .option(
 "checkpointLocation",
-"/checkpoints/customers"
+"/Volumes/dedatabricsws/demo/raw_volume/checkpoints/customers"
 )
 .trigger(availableNow=True)
 .toTable("ecommerce_bronze.customers")

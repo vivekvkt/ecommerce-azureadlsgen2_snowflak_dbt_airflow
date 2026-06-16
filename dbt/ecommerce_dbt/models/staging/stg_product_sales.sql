@@ -4,4 +4,4 @@ SELECT
 
     total_orders
 
-FROM {{ source('ecommerce','PRODUCT_SALES') }}
+FROM {{ source('ecommerce','PRODUCT_SALES_V2') }}

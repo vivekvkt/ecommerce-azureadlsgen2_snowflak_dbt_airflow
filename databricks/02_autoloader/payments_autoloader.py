@@ -17,13 +17,15 @@ df_payments = (
          .load("/Volumes/dedatabricsws/demo/raw_volume/payments")
 )
 
+
+
 (
-    df_payments.writeStream
-               .format("delta")
-               .option(
-                   "checkpointLocation",
-                   "/checkpoints/payments"
-               )
-               .trigger(availableNow=True)
-               .toTable("ecommerce_bronze.payments")
+df.writeStream
+.format("delta")
+.option(
+"checkpointLocation",
+"/Volumes/dedatabricsws/demo/raw_volume/checkpoints/payments"
+)
+.trigger(availableNow=True)
+.toTable("ecommerce_bronze.payments")
 )

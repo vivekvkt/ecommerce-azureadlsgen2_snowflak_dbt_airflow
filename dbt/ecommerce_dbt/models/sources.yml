@@ -10,8 +10,6 @@ sources:
 
     tables:
 
-      - name: CUSTOMER_REVENUE
-
-      - name: PRODUCT_SALES
-
-      - name: DAILY_REVENUE
+      - name: CUSTOMER_REVENUE_V2
+      - name: PRODUCT_SALES_V2
+      - name: DAILY_REVENUE_V2

@@ -16,13 +16,15 @@ df_products = (
          .load("/Volumes/dedatabricsws/demo/raw_volume/products")
 )
 
+
+
 (
-    df_products.writeStream
-               .format("delta")
-               .option(
-                   "checkpointLocation",
-                   "/checkpoints/products"
-               )
-               .trigger(availableNow=True)
-               .toTable("ecommerce_bronze.products")
+df.writeStream
+.format("delta")
+.option(
+"checkpointLocation",
+"/Volumes/dedatabricsws/demo/raw_volume/checkpoints/products"
+)
+.trigger(availableNow=True)
+.toTable("ecommerce_bronze.products")
 )

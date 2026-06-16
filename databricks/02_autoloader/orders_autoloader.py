@@ -18,13 +18,15 @@ df_orders = (
          .load("/Volumes/dedatabricsws/demo/raw_volume/orders")
 )
 
+
+
 (
-    df_orders.writeStream
-             .format("delta")
-             .option(
-                 "checkpointLocation",
-                 "/checkpoints/orders"
-             )
-             .trigger(availableNow=True)
-             .toTable("ecommerce_bronze.orders")
+df.writeStream
+.format("delta")
+.option(
+"checkpointLocation",
+"/Volumes/dedatabricsws/demo/raw_volume/checkpoints/orders"
+)
+.trigger(availableNow=True)
+.toTable("ecommerce_bronze.orders")
 )

@@ -4,4 +4,4 @@ SELECT
 
     total_revenue
 
-FROM {{ source('ecommerce','CUSTOMER_REVENUE') }}
+FROM {{ source('ecommerce','CUSTOMER_REVENUE_V2') }}

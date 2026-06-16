@@ -27,10 +27,10 @@ ecommerce-platform/
 │   │   ├── merge_products.sql
 │   │   └── merge_payments.sql
 │   │
-│   ├── 05_dlt/
-│   │   ├── bronze_dlt.py
-│   │   ├── silver_dlt.py
-│   │   └── gold_dlt.py
+│   ├── 05_PySpark-Gold_Transformations/
+│   │   ├── customer_revenue.py
+│   │   ├── daily_revenue.py
+│   │   └── product_sales.py
 │   │
 │   └── 06_snowflake_load/
 │       └── load_to_snowflake.py

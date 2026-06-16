@@ -39,15 +39,3 @@ VALUES (
     src.total_amount
 );
 
-
--- MERGE INTO ecommerce_silver.orders tgt
-
--- USING ecommerce_bronze.orders src
-
--- ON tgt.order_id = src.order_id
-
--- WHEN MATCHED THEN
--- UPDATE SET *
-
--- WHEN NOT MATCHED THEN
--- INSERT *
