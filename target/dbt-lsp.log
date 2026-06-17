@@ -1,0 +1,1364 @@
+==================== 2026-06-17T14:30:57.956584Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T14:30:57.956661Z | 9ed3d469-513e-462d-957a-c1da5fc5835e ====================
+14:30:57.956681 [info ]: Starting dbt LSP server
+14:30:57.956697 [info ]: Connecting to LSP client on port 35793
+14:30:57.956932 [info ]: Successfully connected to LSP client
+14:30:57.956955 [info ]: Creating LSP service...
+14:30:58.018238 [info ]: Creating LSP server...
+14:30:58.018265 [info ]: Starting LSP server...
+14:30:58.404712 [info ]: Loading profiles.yml
+14:30:58.774319 [info ]: Started loading project
+14:30:58.774644 [info ]: Loading profiles.yml
+14:30:58.781484 [debug]:    Started loading packages
+14:30:58.782188 [debug]:     Loaded [  0.00s] packages
+14:30:58.782796 [info ]: Finished loading project [  0.01s]
+14:30:58.783049 [info ]: Started parsing
+14:30:58.811568 [debug]: Finished parsing models/schema.yml [  0.00s]
+14:30:58.811674 [debug]: Finished parsing models/sources.yml [  0.00s]
+14:30:58.811703 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+14:30:58.812848 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+14:30:58.813101 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+14:30:58.813388 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+14:30:58.813739 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+14:30:58.813980 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+14:30:58.814275 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+14:30:58.814516 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+14:30:58.819112 [info ]: Finished parsing [  0.04s]
+14:30:58.819352 [info ]: Cached model count updated: 7 models (estimate)
+14:30:58.819365 [info ]: Cached model count updated: 7 models (accurate)
+14:30:58.819408 [info ]: Started scheduling
+14:30:58.819463 [info ]: Finished scheduling [  0.00s]
+14:30:58.819475 [debug]: Compilation - 0 nodes selected: {}
+14:30:58.819503 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+14:30:58.819520 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:30:58.819527 [info ]: Started scheduling
+14:30:58.819597 [info ]: Finished scheduling [  0.00s]
+14:30:58.819672 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+14:30:58.819695 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+14:30:58.819703 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+14:30:58.826854 [debug]: No platform credentials found, skipping remote license
+14:30:58.827295 [info ]: Started building task graph
+14:30:58.827324 [info ]: Finished building task graph [  0.00s]
+14:30:58.831108 [info ]: Started scheduling
+14:30:58.831157 [info ]: Finished scheduling [  0.00s]
+14:30:58.831441 [info ]: Cached model count updated: 7 models (accurate)
+14:31:03.054724 [info ]: Started loading project
+14:31:03.054979 [info ]: Loading profiles.yml
+14:31:03.076216 [info ]: Cached model count updated: 7 models (estimate)
+14:31:03.076244 [info ]: Cached model count updated: 7 models (accurate)
+14:31:03.076273 [info ]: Started scheduling
+14:31:03.076361 [info ]: Finished scheduling [  0.00s]
+14:31:03.076378 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+14:31:03.077514 [info ]: Started building task graph
+14:31:03.077620 [info ]: Finished building task graph [  0.00s]
+14:31:03.078130 [info ]: Started rendering (7 nodes)
+14:31:03.078155 [info ]: Started model DBT_DEV.mart_dashboard
+14:31:03.078168 [debug]: Started rendering model DBT_DEV.mart_dashboard
+14:31:03.078196 [info ]: Started model DBT_DEV.stg_daily_revenue
+14:31:03.078205 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+14:31:03.078215 [info ]: Started model DBT_DEV.fct_revenue
+14:31:03.078223 [debug]: Started rendering model DBT_DEV.fct_revenue
+14:31:03.078229 [info ]: Started model DBT_DEV.dim_product
+14:31:03.078237 [debug]: Started rendering model DBT_DEV.dim_product
+14:31:03.078232 [info ]: Finished loading project [  0.02s]
+14:31:03.078245 [info ]: Started model DBT_DEV.stg_product_sales
+14:31:03.078250 [debug]: Started rendering model DBT_DEV.stg_product_sales
+14:31:03.078259 [info ]: Started model DBT_DEV.dim_customer
+14:31:03.078268 [debug]: Started rendering model DBT_DEV.dim_customer
+14:31:03.078275 [info ]: Started model DBT_DEV.stg_customer_revenue
+14:31:03.078279 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+14:31:03.078932 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+14:31:03.079036 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+14:31:03.079074 [info ]: Started analyzing (7 nodes)
+14:31:03.079087 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+14:31:03.079167 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+14:31:03.079183 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+14:31:03.079195 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+14:31:03.079245 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+14:31:03.079275 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+14:31:03.079297 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+14:31:03.079310 [debug]: Started analyzing model DBT_DEV.dim_customer
+14:31:03.079329 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+14:31:03.079341 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+14:31:03.079347 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+14:31:03.079386 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+14:31:03.079395 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+14:31:03.079420 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+14:31:03.079445 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+14:31:03.079465 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+14:31:03.079479 [debug]: Started analyzing model DBT_DEV.fct_revenue
+14:31:03.079495 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+14:31:03.079504 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+14:31:03.079510 [debug]: Started analyzing model DBT_DEV.dim_product
+14:31:03.083417 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+14:31:03.083440 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+14:31:03.083504 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+14:31:03.083514 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+14:31:03.083526 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+14:31:03.083537 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+14:31:03.084370 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+14:31:03.084390 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+14:31:03.084409 [debug]: Finished analyzing [  0.00s] model DBT_DEV.dim_product [success]
+14:31:03.084417 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+14:31:03.086236 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+14:31:03.086260 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+14:31:03.086685 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+14:31:03.086706 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+14:31:03.086714 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+14:31:03.089829 [info ]: Started scheduling
+14:31:03.089879 [info ]: Finished scheduling [  0.00s]
+14:31:03.090164 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T14:34:41.944848Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T14:34:41.944936Z | 6a1b8343-096b-43d7-8ae1-b35934a94729 ====================
+14:34:41.944958 [info ]: Starting dbt LSP server
+14:34:41.944973 [info ]: Connecting to LSP client on port 57811
+14:34:41.945202 [info ]: Successfully connected to LSP client
+14:34:41.945220 [info ]: Creating LSP service...
+14:34:42.007695 [info ]: Creating LSP server...
+14:34:42.007723 [info ]: Starting LSP server...
+14:34:42.294720 [info ]: Loading profiles.yml
+14:34:42.604246 [info ]: Started loading project
+14:34:42.604589 [info ]: Loading profiles.yml
+14:34:42.610877 [debug]:    Started loading packages
+14:34:42.611504 [debug]:     Loaded [  0.00s] packages
+14:34:42.612169 [info ]: Finished loading project [  0.01s]
+14:34:42.612411 [info ]: Started parsing
+14:34:42.640072 [debug]: Finished parsing models/schema.yml [  0.00s]
+14:34:42.640182 [debug]: Finished parsing models/sources.yml [  0.00s]
+14:34:42.640213 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+14:34:42.641208 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+14:34:42.641565 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+14:34:42.641862 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+14:34:42.642168 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+14:34:42.642498 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+14:34:42.642756 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+14:34:42.643011 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+14:34:42.647048 [info ]: Finished parsing [  0.03s]
+14:34:42.647206 [info ]: Cached model count updated: 7 models (estimate)
+14:34:42.647270 [info ]: Cached model count updated: 7 models (accurate)
+14:34:42.647308 [info ]: Started scheduling
+14:34:42.647356 [info ]: Finished scheduling [  0.00s]
+14:34:42.647367 [debug]: Compilation - 0 nodes selected: {}
+14:34:42.647389 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+14:34:42.647405 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:34:42.647411 [info ]: Started scheduling
+14:34:42.647471 [info ]: Finished scheduling [  0.00s]
+14:34:42.647543 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+14:34:42.647557 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+14:34:42.647565 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+14:34:42.654584 [debug]: No platform credentials found, skipping remote license
+14:34:42.655019 [info ]: Started building task graph
+14:34:42.655050 [info ]: Finished building task graph [  0.00s]
+14:34:42.659209 [info ]: Started scheduling
+14:34:42.659252 [info ]: Finished scheduling [  0.00s]
+14:34:42.659549 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T14:34:59.259642Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T14:34:59.259725Z | 9fff5f07-ff82-4b31-9585-d68315e597d2 ====================
+14:34:59.259744 [info ]: Starting dbt LSP server
+14:34:59.259761 [info ]: Connecting to LSP client on port 34911
+14:34:59.259983 [info ]: Successfully connected to LSP client
+14:34:59.260003 [info ]: Creating LSP service...
+14:34:59.322466 [info ]: Creating LSP server...
+14:34:59.322493 [info ]: Starting LSP server...
+14:34:59.614703 [info ]: Loading profiles.yml
+14:35:00.164267 [info ]: Started loading project
+14:35:00.164594 [info ]: Loading profiles.yml
+14:35:00.171071 [debug]:    Started loading packages
+14:35:00.171701 [debug]:     Loaded [  0.00s] packages
+14:35:00.172261 [info ]: Finished loading project [  0.01s]
+14:35:00.172525 [info ]: Started parsing
+14:35:00.200853 [debug]: Finished parsing models/schema.yml [  0.00s]
+14:35:00.200965 [debug]: Finished parsing models/sources.yml [  0.00s]
+14:35:00.200995 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+14:35:00.202224 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+14:35:00.202578 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+14:35:00.202891 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+14:35:00.203587 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+14:35:00.203872 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+14:35:00.204127 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+14:35:00.204515 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+14:35:00.208520 [info ]: Finished parsing [  0.04s]
+14:35:00.208688 [info ]: Cached model count updated: 7 models (estimate)
+14:35:00.208702 [info ]: Cached model count updated: 7 models (accurate)
+14:35:00.208746 [info ]: Started scheduling
+14:35:00.208862 [info ]: Finished scheduling [  0.00s]
+14:35:00.208874 [debug]: Compilation - 0 nodes selected: {}
+14:35:00.208901 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+14:35:00.208918 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:35:00.208926 [info ]: Started scheduling
+14:35:00.208993 [info ]: Finished scheduling [  0.00s]
+14:35:00.209075 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+14:35:00.209091 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+14:35:00.209100 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+14:35:00.216232 [debug]: No platform credentials found, skipping remote license
+14:35:00.216641 [info ]: Started building task graph
+14:35:00.216671 [info ]: Finished building task graph [  0.00s]
+14:35:00.220307 [info ]: Started scheduling
+14:35:00.220346 [info ]: Finished scheduling [  0.00s]
+14:35:00.220640 [info ]: Cached model count updated: 7 models (accurate)
+14:35:04.784322 [info ]: Started loading project
+14:35:04.784571 [info ]: Loading profiles.yml
+14:35:04.806242 [info ]: Cached model count updated: 7 models (estimate)
+14:35:04.806270 [info ]: Cached model count updated: 7 models (accurate)
+14:35:04.806296 [info ]: Started scheduling
+14:35:04.806379 [info ]: Finished scheduling [  0.00s]
+14:35:04.806396 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+14:35:04.807550 [info ]: Started building task graph
+14:35:04.807645 [info ]: Finished building task graph [  0.00s]
+14:35:04.808121 [info ]: Started rendering (7 nodes)
+14:35:04.808147 [info ]: Started model DBT_DEV.mart_dashboard
+14:35:04.808161 [debug]: Started rendering model DBT_DEV.mart_dashboard
+14:35:04.808189 [info ]: Started model DBT_DEV.stg_daily_revenue
+14:35:04.808199 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+14:35:04.808210 [info ]: Started model DBT_DEV.fct_revenue
+14:35:04.808220 [debug]: Started rendering model DBT_DEV.fct_revenue
+14:35:04.808218 [info ]: Finished loading project [  0.02s]
+14:35:04.808227 [info ]: Started model DBT_DEV.dim_product
+14:35:04.808249 [debug]: Started rendering model DBT_DEV.dim_product
+14:35:04.808261 [info ]: Started model DBT_DEV.stg_product_sales
+14:35:04.808270 [debug]: Started rendering model DBT_DEV.stg_product_sales
+14:35:04.808282 [info ]: Started model DBT_DEV.dim_customer
+14:35:04.808289 [debug]: Started rendering model DBT_DEV.dim_customer
+14:35:04.808298 [info ]: Started model DBT_DEV.stg_customer_revenue
+14:35:04.808306 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+14:35:04.808861 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+14:35:04.808963 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+14:35:04.809008 [info ]: Started analyzing (7 nodes)
+14:35:04.809028 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+14:35:04.809168 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+14:35:04.809179 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+14:35:04.809190 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+14:35:04.809222 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+14:35:04.809229 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+14:35:04.809227 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+14:35:04.809245 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+14:35:04.809268 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+14:35:04.809286 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+14:35:04.809295 [debug]: Started analyzing model DBT_DEV.dim_product
+14:35:04.809311 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+14:35:04.809319 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+14:35:04.809326 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+14:35:04.809334 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+14:35:04.809341 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+14:35:04.809348 [debug]: Started analyzing model DBT_DEV.fct_revenue
+14:35:04.809356 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+14:35:04.809364 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+14:35:04.809369 [debug]: Started analyzing model DBT_DEV.dim_customer
+14:35:04.813306 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+14:35:04.813325 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_customer_revenue (view)
+14:35:04.813340 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+14:35:04.813350 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_product_sales (view)
+14:35:04.813357 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+14:35:04.813378 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+14:35:04.814367 [debug]: Finished analyzing [  0.00s] model DBT_DEV.dim_customer [success]
+14:35:04.814403 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+14:35:04.814423 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+14:35:04.814432 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+14:35:04.816145 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+14:35:04.816167 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+14:35:04.816493 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+14:35:04.816511 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+14:35:04.816521 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+14:35:04.819187 [info ]: Started scheduling
+14:35:04.819232 [info ]: Finished scheduling [  0.00s]
+14:35:04.819485 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T14:51:27.569852Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T14:51:27.569934Z | a0056481-8d86-4719-b9d5-ff0e7c265c95 ====================
+14:51:27.569954 [info ]: Starting dbt LSP server
+14:51:27.569968 [info ]: Connecting to LSP client on port 41567
+14:51:27.570218 [info ]: Successfully connected to LSP client
+14:51:27.570244 [info ]: Creating LSP service...
+14:51:27.631233 [info ]: Creating LSP server...
+14:51:27.631262 [info ]: Starting LSP server...
+14:51:28.925148 [info ]: Loading profiles.yml
+14:51:29.514285 [info ]: Started loading project
+14:51:29.514577 [info ]: Loading profiles.yml
+14:51:29.521041 [debug]:    Started loading packages
+14:51:29.521717 [debug]:     Loaded [  0.00s] packages
+14:51:29.522413 [info ]: Finished loading project [  0.01s]
+14:51:29.522662 [info ]: Started parsing
+14:51:29.550536 [debug]: Finished parsing models/schema.yml [  0.00s]
+14:51:29.550653 [debug]: Finished parsing models/sources.yml [  0.00s]
+14:51:29.550684 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+14:51:29.551766 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+14:51:29.552110 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+14:51:29.552408 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+14:51:29.552712 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+14:51:29.552991 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+14:51:29.553256 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+14:51:29.553538 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+14:51:29.557282 [info ]: Finished parsing [  0.03s]
+14:51:29.557457 [info ]: Cached model count updated: 7 models (estimate)
+14:51:29.557469 [info ]: Cached model count updated: 7 models (accurate)
+14:51:29.557503 [info ]: Started scheduling
+14:51:29.557553 [info ]: Finished scheduling [  0.00s]
+14:51:29.557563 [debug]: Compilation - 0 nodes selected: {}
+14:51:29.557583 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+14:51:29.557597 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:51:29.557603 [info ]: Started scheduling
+14:51:29.557662 [info ]: Finished scheduling [  0.00s]
+14:51:29.557729 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+14:51:29.557744 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+14:51:29.557749 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+14:51:29.565137 [debug]: No platform credentials found, skipping remote license
+14:51:29.565535 [info ]: Started building task graph
+14:51:29.565566 [info ]: Finished building task graph [  0.00s]
+14:51:29.569218 [info ]: Started scheduling
+14:51:29.569262 [info ]: Finished scheduling [  0.00s]
+14:51:29.569532 [info ]: Cached model count updated: 7 models (accurate)
+14:51:39.834342 [info ]: Started loading project
+14:51:39.834594 [info ]: Loading profiles.yml
+14:51:39.857979 [info ]: Cached model count updated: 7 models (estimate)
+14:51:39.858009 [info ]: Cached model count updated: 7 models (accurate)
+14:51:39.858047 [info ]: Started scheduling
+14:51:39.858135 [info ]: Finished scheduling [  0.00s]
+14:51:39.858152 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+14:51:39.859775 [info ]: Started building task graph
+14:51:39.859906 [info ]: Finished building task graph [  0.00s]
+14:51:39.860532 [info ]: Started rendering (7 nodes)
+14:51:39.860562 [info ]: Started model DBT_DEV.mart_dashboard
+14:51:39.860581 [debug]: Started rendering model DBT_DEV.mart_dashboard
+14:51:39.860625 [info ]: Started model DBT_DEV.stg_daily_revenue
+14:51:39.860639 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+14:51:39.860658 [info ]: Started model DBT_DEV.fct_revenue
+14:51:39.860658 [info ]: Finished loading project [  0.03s]
+14:51:39.860677 [debug]: Started rendering model DBT_DEV.fct_revenue
+14:51:39.860695 [info ]: Started model DBT_DEV.dim_product
+14:51:39.860704 [debug]: Started rendering model DBT_DEV.dim_product
+14:51:39.860715 [info ]: Started model DBT_DEV.stg_product_sales
+14:51:39.860727 [debug]: Started rendering model DBT_DEV.stg_product_sales
+14:51:39.860744 [info ]: Started model DBT_DEV.dim_customer
+14:51:39.860755 [debug]: Started rendering model DBT_DEV.dim_customer
+14:51:39.860771 [info ]: Started model DBT_DEV.stg_customer_revenue
+14:51:39.860783 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+14:51:39.861664 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+14:51:39.861665 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+14:51:39.861664 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+14:51:39.861682 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+14:51:39.861702 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+14:51:39.861718 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+14:51:39.861742 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+14:51:39.861763 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+14:51:39.861806 [info ]: Started analyzing (7 nodes)
+14:51:39.861820 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+14:51:39.861841 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+14:51:39.861851 [debug]: Started analyzing model DBT_DEV.dim_product
+14:51:39.861867 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+14:51:39.861875 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+14:51:39.861889 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+14:51:39.861896 [debug]: Started analyzing model DBT_DEV.dim_customer
+14:51:39.861905 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+14:51:39.861927 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+14:51:39.861941 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+14:51:39.861948 [debug]: Started analyzing model DBT_DEV.fct_revenue
+14:51:39.861961 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+14:51:39.861968 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+14:51:39.861974 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+14:51:39.866123 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+14:51:39.866146 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+14:51:39.866175 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+14:51:39.866184 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+14:51:39.866194 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+14:51:39.866201 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+14:51:39.867028 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+14:51:39.867050 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+14:51:39.867065 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+14:51:39.867073 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+14:51:39.868879 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+14:51:39.868903 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+14:51:39.869241 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+14:51:39.869260 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+14:51:39.869269 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+14:51:39.872489 [info ]: Started scheduling
+14:51:39.872538 [info ]: Finished scheduling [  0.00s]
+14:51:39.872779 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:06:30.603795Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:06:30.603879Z | 057409b3-cb9a-49c3-8e21-230254f29893 ====================
+15:06:30.603898 [info ]: Starting dbt LSP server
+15:06:30.603915 [info ]: Connecting to LSP client on port 53441
+15:06:30.604148 [info ]: Successfully connected to LSP client
+15:06:30.604167 [info ]: Creating LSP service...
+15:06:30.666231 [info ]: Creating LSP server...
+15:06:30.666258 [info ]: Starting LSP server...
+15:06:31.064737 [info ]: Loading profiles.yml
+15:06:31.584339 [info ]: Started loading project
+15:06:31.584672 [info ]: Loading profiles.yml
+15:06:31.591452 [debug]:    Started loading packages
+15:06:31.592074 [debug]:     Loaded [  0.00s] packages
+15:06:31.592648 [info ]: Finished loading project [  0.01s]
+15:06:31.592889 [info ]: Started parsing
+15:06:31.621210 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:06:31.621361 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:06:31.621403 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:06:31.622523 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:06:31.622893 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:06:31.623147 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:06:31.623506 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:06:31.623825 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:06:31.624084 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:06:31.624335 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:06:31.628243 [info ]: Finished parsing [  0.04s]
+15:06:31.628418 [info ]: Cached model count updated: 7 models (estimate)
+15:06:31.628432 [info ]: Cached model count updated: 7 models (accurate)
+15:06:31.628469 [info ]: Started scheduling
+15:06:31.628578 [info ]: Finished scheduling [  0.00s]
+15:06:31.628591 [debug]: Compilation - 0 nodes selected: {}
+15:06:31.628621 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:06:31.628642 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:06:31.628655 [info ]: Started scheduling
+15:06:31.628721 [info ]: Finished scheduling [  0.00s]
+15:06:31.628809 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:06:31.628829 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:06:31.628843 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:06:31.636102 [debug]: No platform credentials found, skipping remote license
+15:06:31.636549 [info ]: Started building task graph
+15:06:31.636590 [info ]: Finished building task graph [  0.00s]
+15:06:31.640469 [info ]: Started scheduling
+15:06:31.640521 [info ]: Finished scheduling [  0.00s]
+15:06:31.640821 [info ]: Cached model count updated: 7 models (accurate)
+15:06:35.014586 [info ]: Started loading project
+15:06:35.014824 [info ]: Loading profiles.yml
+15:06:35.035508 [info ]: Cached model count updated: 7 models (estimate)
+15:06:35.035538 [info ]: Cached model count updated: 7 models (accurate)
+15:06:35.035564 [info ]: Started scheduling
+15:06:35.035644 [info ]: Finished scheduling [  0.00s]
+15:06:35.035661 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:06:35.036774 [info ]: Started building task graph
+15:06:35.036873 [info ]: Finished building task graph [  0.00s]
+15:06:35.037346 [info ]: Started rendering (7 nodes)
+15:06:35.037370 [info ]: Started model DBT_DEV.mart_dashboard
+15:06:35.037385 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:06:35.037414 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:06:35.037423 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:06:35.037435 [info ]: Started model DBT_DEV.fct_revenue
+15:06:35.037446 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:06:35.037456 [info ]: Started model DBT_DEV.dim_product
+15:06:35.037466 [debug]: Started rendering model DBT_DEV.dim_product
+15:06:35.037450 [info ]: Finished loading project [  0.02s]
+15:06:35.037485 [info ]: Started model DBT_DEV.stg_product_sales
+15:06:35.037497 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:06:35.037515 [info ]: Started model DBT_DEV.dim_customer
+15:06:35.037525 [debug]: Started rendering model DBT_DEV.dim_customer
+15:06:35.037536 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:06:35.037546 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:06:35.038139 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:06:35.038243 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:06:35.038299 [info ]: Started analyzing (7 nodes)
+15:06:35.038318 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:06:35.038397 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:06:35.038401 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:06:35.038412 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:06:35.038422 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:06:35.038455 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:06:35.038462 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:06:35.038491 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:06:35.038515 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:06:35.038536 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:06:35.038548 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:06:35.038633 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:06:35.038642 [debug]: Started analyzing model DBT_DEV.dim_product
+15:06:35.038655 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:06:35.038664 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:06:35.038681 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:06:35.038688 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:06:35.038703 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:06:35.038710 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:06:35.038716 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:06:35.042528 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:06:35.042551 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_daily_revenue (view)
+15:06:35.042571 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:06:35.042579 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_product_sales (view)
+15:06:35.042590 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:06:35.042626 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_customer_revenue (view)
+15:06:35.043815 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:06:35.043838 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:06:35.043935 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:06:35.043960 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:06:35.045624 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:06:35.045642 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:06:35.046015 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:06:35.046034 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:06:35.046054 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:06:35.049240 [info ]: Started scheduling
+15:06:35.049289 [info ]: Finished scheduling [  0.00s]
+15:06:35.049523 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:11:26.578318Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:11:26.578403Z | 2e8800d9-9739-4c57-9f10-61d3efc913cc ====================
+15:11:26.578423 [info ]: Starting dbt LSP server
+15:11:26.578438 [info ]: Connecting to LSP client on port 46989
+15:11:26.578667 [info ]: Successfully connected to LSP client
+15:11:26.578689 [info ]: Creating LSP service...
+15:11:26.642393 [info ]: Creating LSP server...
+15:11:26.642423 [info ]: Starting LSP server...
+15:11:27.015123 [info ]: Loading profiles.yml
+15:11:27.434282 [info ]: Started loading project
+15:11:27.434603 [info ]: Loading profiles.yml
+15:11:27.441219 [debug]:    Started loading packages
+15:11:27.441923 [debug]:     Loaded [  0.00s] packages
+15:11:27.442601 [info ]: Finished loading project [  0.01s]
+15:11:27.442904 [info ]: Started parsing
+15:11:27.471975 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:11:27.472102 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:11:27.472131 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:11:27.473362 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:11:27.473707 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:11:27.473998 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:11:27.474281 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:11:27.474510 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:11:27.474752 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:11:27.474983 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:11:27.479366 [info ]: Finished parsing [  0.04s]
+15:11:27.479519 [info ]: Cached model count updated: 7 models (estimate)
+15:11:27.479531 [info ]: Cached model count updated: 7 models (accurate)
+15:11:27.479570 [info ]: Started scheduling
+15:11:27.479622 [info ]: Finished scheduling [  0.00s]
+15:11:27.479633 [debug]: Compilation - 0 nodes selected: {}
+15:11:27.479657 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:11:27.479671 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:11:27.479680 [info ]: Started scheduling
+15:11:27.479745 [info ]: Finished scheduling [  0.00s]
+15:11:27.479828 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:11:27.479843 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:11:27.479852 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:11:27.486875 [debug]: No platform credentials found, skipping remote license
+15:11:27.487302 [info ]: Started building task graph
+15:11:27.487340 [info ]: Finished building task graph [  0.00s]
+15:11:27.491104 [info ]: Started scheduling
+15:11:27.491157 [info ]: Finished scheduling [  0.00s]
+15:11:27.491643 [info ]: Cached model count updated: 7 models (accurate)
+15:11:32.494272 [info ]: Started loading project
+15:11:32.494532 [info ]: Loading profiles.yml
+15:11:32.516815 [info ]: Cached model count updated: 7 models (estimate)
+15:11:32.516843 [info ]: Cached model count updated: 7 models (accurate)
+15:11:32.516870 [info ]: Started scheduling
+15:11:32.516961 [info ]: Finished scheduling [  0.00s]
+15:11:32.516977 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:11:32.518198 [info ]: Started building task graph
+15:11:32.518298 [info ]: Finished building task graph [  0.00s]
+15:11:32.518791 [info ]: Started rendering (7 nodes)
+15:11:32.518816 [info ]: Started model DBT_DEV.mart_dashboard
+15:11:32.518828 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:11:32.518859 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:11:32.518868 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:11:32.518879 [info ]: Started model DBT_DEV.fct_revenue
+15:11:32.518890 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:11:32.518904 [info ]: Started model DBT_DEV.dim_product
+15:11:32.518905 [info ]: Finished loading project [  0.02s]
+15:11:32.518915 [debug]: Started rendering model DBT_DEV.dim_product
+15:11:32.518928 [info ]: Started model DBT_DEV.stg_product_sales
+15:11:32.518938 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:11:32.518948 [info ]: Started model DBT_DEV.dim_customer
+15:11:32.518958 [debug]: Started rendering model DBT_DEV.dim_customer
+15:11:32.518970 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:11:32.518981 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:11:32.519550 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:11:32.519655 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:11:32.519699 [info ]: Started analyzing (7 nodes)
+15:11:32.519714 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:11:32.519878 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:11:32.519880 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:11:32.519939 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:11:32.520014 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:11:32.520038 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:11:32.520038 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:11:32.520039 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:11:32.520047 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:11:32.520067 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:11:32.520086 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:11:32.520107 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:11:32.520113 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:11:32.520134 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:11:32.520148 [debug]: Started analyzing model DBT_DEV.dim_product
+15:11:32.520164 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:11:32.520177 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:11:32.520196 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:11:32.520206 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:11:32.520217 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:11:32.524441 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:11:32.524465 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_daily_revenue (view)
+15:11:32.524482 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:11:32.524490 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+15:11:32.524503 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:11:32.524511 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:11:32.525456 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:11:32.525476 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:11:32.525494 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:11:32.525503 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:11:32.527220 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:11:32.527240 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:11:32.527574 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:11:32.527596 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:11:32.527605 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:11:32.530757 [info ]: Started scheduling
+15:11:32.530806 [info ]: Finished scheduling [  0.00s]
+15:11:32.531070 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:12:20.294257Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:12:20.294343Z | 74780790-9747-4777-afe3-4204d74ff2fb ====================
+15:12:20.294363 [info ]: Starting dbt LSP server
+15:12:20.294380 [info ]: Connecting to LSP client on port 50963
+15:12:20.294615 [info ]: Successfully connected to LSP client
+15:12:20.294636 [info ]: Creating LSP service...
+15:12:20.358237 [info ]: Creating LSP server...
+15:12:20.358265 [info ]: Starting LSP server...
+15:12:20.654793 [info ]: Loading profiles.yml
+15:12:21.024341 [info ]: Started loading project
+15:12:21.024716 [info ]: Loading profiles.yml
+15:12:21.031364 [debug]:    Started loading packages
+15:12:21.032023 [debug]:     Loaded [  0.00s] packages
+15:12:21.032622 [info ]: Finished loading project [  0.01s]
+15:12:21.032882 [info ]: Started parsing
+15:12:21.062146 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:12:21.062256 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:12:21.062288 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:12:21.063669 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:12:21.063943 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:12:21.064361 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:12:21.064762 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:12:21.065029 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:12:21.065341 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:12:21.065623 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:12:21.069717 [info ]: Finished parsing [  0.04s]
+15:12:21.069890 [info ]: Cached model count updated: 7 models (estimate)
+15:12:21.069957 [info ]: Cached model count updated: 7 models (accurate)
+15:12:21.069993 [info ]: Started scheduling
+15:12:21.070057 [info ]: Finished scheduling [  0.00s]
+15:12:21.070069 [debug]: Compilation - 0 nodes selected: {}
+15:12:21.070094 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:12:21.070113 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:12:21.070123 [info ]: Started scheduling
+15:12:21.070186 [info ]: Finished scheduling [  0.00s]
+15:12:21.070252 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:12:21.070269 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:12:21.070277 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:12:21.078055 [debug]: No platform credentials found, skipping remote license
+15:12:21.078490 [info ]: Started building task graph
+15:12:21.078527 [info ]: Finished building task graph [  0.00s]
+15:12:21.082572 [info ]: Started scheduling
+15:12:21.082618 [info ]: Finished scheduling [  0.00s]
+15:12:21.082922 [info ]: Cached model count updated: 7 models (accurate)
+15:12:24.604312 [info ]: Started loading project
+15:12:24.604569 [info ]: Loading profiles.yml
+15:12:24.626509 [info ]: Cached model count updated: 7 models (estimate)
+15:12:24.626539 [info ]: Cached model count updated: 7 models (accurate)
+15:12:24.626569 [info ]: Started scheduling
+15:12:24.626656 [info ]: Finished scheduling [  0.00s]
+15:12:24.626672 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:12:24.627809 [info ]: Started building task graph
+15:12:24.627912 [info ]: Finished building task graph [  0.00s]
+15:12:24.628391 [info ]: Started rendering (7 nodes)
+15:12:24.628415 [info ]: Started model DBT_DEV.mart_dashboard
+15:12:24.628429 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:12:24.628457 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:12:24.628466 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:12:24.628475 [info ]: Started model DBT_DEV.fct_revenue
+15:12:24.628485 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:12:24.628496 [info ]: Started model DBT_DEV.dim_product
+15:12:24.628493 [info ]: Finished loading project [  0.02s]
+15:12:24.628504 [debug]: Started rendering model DBT_DEV.dim_product
+15:12:24.628514 [info ]: Started model DBT_DEV.stg_product_sales
+15:12:24.628522 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:12:24.628529 [info ]: Started model DBT_DEV.dim_customer
+15:12:24.628534 [debug]: Started rendering model DBT_DEV.dim_customer
+15:12:24.628544 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:12:24.628554 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:12:24.629189 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:12:24.629288 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:12:24.629327 [info ]: Started analyzing (7 nodes)
+15:12:24.629341 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:12:24.629387 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:12:24.629390 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:12:24.629391 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:12:24.629393 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:12:24.629463 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:12:24.629486 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:12:24.629501 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:12:24.629501 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:12:24.629506 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:12:24.629539 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:12:24.629555 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:12:24.629564 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:12:24.629574 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:12:24.629589 [debug]: Started analyzing model DBT_DEV.dim_product
+15:12:24.629602 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:12:24.629612 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:12:24.629634 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:12:24.629644 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:12:24.629666 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:12:24.633718 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:12:24.633740 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+15:12:24.633760 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:12:24.633769 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:12:24.633782 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:12:24.633789 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+15:12:24.634644 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:12:24.634667 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:12:24.634685 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:12:24.634693 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:12:24.636563 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:12:24.636584 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:12:24.637189 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:12:24.637214 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:12:24.637227 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:12:24.640248 [info ]: Started scheduling
+15:12:24.640294 [info ]: Finished scheduling [  0.00s]
+15:12:24.640531 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:12:38.257584Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:12:38.257672Z | 0136bc65-d21f-4643-81f5-8e718e4ab39d ====================
+15:12:38.257692 [info ]: Starting dbt LSP server
+15:12:38.257705 [info ]: Connecting to LSP client on port 59241
+15:12:38.257922 [info ]: Successfully connected to LSP client
+15:12:38.257939 [info ]: Creating LSP service...
+15:12:38.319781 [info ]: Creating LSP server...
+15:12:38.319812 [info ]: Starting LSP server...
+15:12:38.954813 [info ]: Loading profiles.yml
+15:12:39.294309 [info ]: Started loading project
+15:12:39.294664 [info ]: Loading profiles.yml
+15:12:39.301028 [debug]:    Started loading packages
+15:12:39.301733 [debug]:     Loaded [  0.00s] packages
+15:12:39.302498 [info ]: Finished loading project [  0.01s]
+15:12:39.302743 [info ]: Started parsing
+15:12:39.331391 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:12:39.331506 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:12:39.331538 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:12:39.332837 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:12:39.333150 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:12:39.333421 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:12:39.333724 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:12:39.334174 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:12:39.334482 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:12:39.334723 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:12:39.341308 [info ]: Finished parsing [  0.04s]
+15:12:39.341498 [info ]: Cached model count updated: 7 models (estimate)
+15:12:39.341518 [info ]: Cached model count updated: 7 models (accurate)
+15:12:39.341577 [info ]: Started scheduling
+15:12:39.341651 [info ]: Finished scheduling [  0.00s]
+15:12:39.341670 [debug]: Compilation - 0 nodes selected: {}
+15:12:39.341699 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:12:39.341721 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:12:39.341739 [info ]: Started scheduling
+15:12:39.341839 [info ]: Finished scheduling [  0.00s]
+15:12:39.341947 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:12:39.341971 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:12:39.341984 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:12:39.349265 [debug]: No platform credentials found, skipping remote license
+15:12:39.349799 [info ]: Started building task graph
+15:12:39.349851 [info ]: Finished building task graph [  0.00s]
+15:12:39.355360 [info ]: Started scheduling
+15:12:39.355417 [info ]: Finished scheduling [  0.00s]
+15:12:39.356100 [info ]: Cached model count updated: 7 models (accurate)
+15:12:43.394450 [info ]: Started loading project
+15:12:43.394722 [info ]: Loading profiles.yml
+15:12:43.416495 [info ]: Cached model count updated: 7 models (estimate)
+15:12:43.416524 [info ]: Cached model count updated: 7 models (accurate)
+15:12:43.416553 [info ]: Started scheduling
+15:12:43.416643 [info ]: Finished scheduling [  0.00s]
+15:12:43.416661 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:12:43.417840 [info ]: Started building task graph
+15:12:43.417943 [info ]: Finished building task graph [  0.00s]
+15:12:43.418453 [info ]: Started rendering (7 nodes)
+15:12:43.418478 [info ]: Started model DBT_DEV.mart_dashboard
+15:12:43.418491 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:12:43.418519 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:12:43.418528 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:12:43.418537 [info ]: Started model DBT_DEV.fct_revenue
+15:12:43.418546 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:12:43.418553 [info ]: Started model DBT_DEV.dim_product
+15:12:43.418560 [debug]: Started rendering model DBT_DEV.dim_product
+15:12:43.418558 [info ]: Finished loading project [  0.02s]
+15:12:43.418568 [info ]: Started model DBT_DEV.stg_product_sales
+15:12:43.418591 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:12:43.418602 [info ]: Started model DBT_DEV.dim_customer
+15:12:43.418612 [debug]: Started rendering model DBT_DEV.dim_customer
+15:12:43.418624 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:12:43.418631 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:12:43.419245 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:12:43.419346 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:12:43.419404 [info ]: Started analyzing (7 nodes)
+15:12:43.419425 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:12:43.419583 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:12:43.419616 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:12:43.419642 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:12:43.419651 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:12:43.419660 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:12:43.419678 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:12:43.419699 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:12:43.419708 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:12:43.419708 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:12:43.419721 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:12:43.419727 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:12:43.419748 [debug]: Started analyzing model DBT_DEV.dim_product
+15:12:43.419772 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:12:43.419781 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:12:43.419789 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:12:43.419797 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:12:43.419806 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:12:43.419814 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:12:43.419819 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:12:43.423717 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:12:43.423735 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_customer_revenue (view)
+15:12:43.423751 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:12:43.423760 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_daily_revenue (view)
+15:12:43.423770 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:12:43.423778 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:12:43.424867 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:12:43.424888 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:12:43.424906 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:12:43.424914 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:12:43.426682 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:12:43.426701 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:12:43.427051 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:12:43.427070 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:12:43.427079 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:12:43.430630 [info ]: Started scheduling
+15:12:43.430678 [info ]: Finished scheduling [  0.00s]
+15:12:43.430933 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:12:54.518078Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:12:54.518163Z | 9902e47d-8193-4d07-b019-e55eeeeced4f ====================
+15:12:54.518183 [info ]: Starting dbt LSP server
+15:12:54.518199 [info ]: Connecting to LSP client on port 51449
+15:12:54.518418 [info ]: Successfully connected to LSP client
+15:12:54.518439 [info ]: Creating LSP service...
+15:12:54.580659 [info ]: Creating LSP server...
+15:12:54.580689 [info ]: Starting LSP server...
+15:12:55.054845 [info ]: Loading profiles.yml
+15:12:55.674272 [info ]: Started loading project
+15:12:55.674576 [info ]: Loading profiles.yml
+15:12:55.681217 [debug]:    Started loading packages
+15:12:55.681937 [debug]:     Loaded [  0.00s] packages
+15:12:55.682561 [info ]: Finished loading project [  0.01s]
+15:12:55.682838 [info ]: Started parsing
+15:12:55.711472 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:12:55.711585 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:12:55.711618 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:12:55.712749 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:12:55.713122 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:12:55.713480 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:12:55.713801 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:12:55.714309 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:12:55.714575 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:12:55.714873 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:12:55.719343 [info ]: Finished parsing [  0.04s]
+15:12:55.719506 [info ]: Cached model count updated: 7 models (estimate)
+15:12:55.719519 [info ]: Cached model count updated: 7 models (accurate)
+15:12:55.719553 [info ]: Started scheduling
+15:12:55.719611 [info ]: Finished scheduling [  0.00s]
+15:12:55.719622 [debug]: Compilation - 0 nodes selected: {}
+15:12:55.719654 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:12:55.719675 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:12:55.719685 [info ]: Started scheduling
+15:12:55.719749 [info ]: Finished scheduling [  0.00s]
+15:12:55.719822 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:12:55.719839 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:12:55.719848 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:12:55.727079 [debug]: No platform credentials found, skipping remote license
+15:12:55.727505 [info ]: Started building task graph
+15:12:55.727543 [info ]: Finished building task graph [  0.00s]
+15:12:55.731524 [info ]: Started scheduling
+15:12:55.731574 [info ]: Finished scheduling [  0.00s]
+15:12:55.731865 [info ]: Cached model count updated: 7 models (accurate)
+15:13:18.474296 [info ]: Started loading project
+15:13:18.474550 [info ]: Loading profiles.yml
+15:13:18.495911 [info ]: Cached model count updated: 7 models (estimate)
+15:13:18.495939 [info ]: Cached model count updated: 7 models (accurate)
+15:13:18.495965 [info ]: Started scheduling
+15:13:18.496048 [info ]: Finished scheduling [  0.00s]
+15:13:18.496064 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:13:18.497197 [info ]: Started building task graph
+15:13:18.497300 [info ]: Finished building task graph [  0.00s]
+15:13:18.497797 [info ]: Started rendering (7 nodes)
+15:13:18.497822 [info ]: Started model DBT_DEV.mart_dashboard
+15:13:18.497835 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:13:18.497863 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:13:18.497871 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:13:18.497878 [info ]: Started model DBT_DEV.fct_revenue
+15:13:18.497886 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:13:18.497896 [info ]: Started model DBT_DEV.dim_product
+15:13:18.497895 [info ]: Finished loading project [  0.02s]
+15:13:18.497905 [debug]: Started rendering model DBT_DEV.dim_product
+15:13:18.497917 [info ]: Started model DBT_DEV.stg_product_sales
+15:13:18.497927 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:13:18.497942 [info ]: Started model DBT_DEV.dim_customer
+15:13:18.497952 [debug]: Started rendering model DBT_DEV.dim_customer
+15:13:18.497963 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:13:18.497972 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:13:18.498947 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:13:18.498949 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:13:18.498948 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:13:18.498961 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:13:18.498973 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:13:18.498980 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:13:18.498988 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:13:18.499044 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:13:18.499082 [info ]: Started analyzing (7 nodes)
+15:13:18.499096 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:13:18.499119 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:13:18.499129 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:13:18.499146 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:13:18.499154 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:13:18.499167 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:13:18.499176 [debug]: Started analyzing model DBT_DEV.dim_product
+15:13:18.499191 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:13:18.499199 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:13:18.499214 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:13:18.499223 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:13:18.499239 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:13:18.499246 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:13:18.499251 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:13:18.503727 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:13:18.503747 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+15:13:18.503766 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:13:18.503777 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+15:13:18.503800 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:13:18.503811 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:13:18.504619 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:13:18.504643 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:13:18.504661 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:13:18.504670 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:13:18.506381 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:13:18.506401 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:13:18.506751 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:13:18.506769 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:13:18.506778 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:13:18.509766 [info ]: Started scheduling
+15:13:18.509813 [info ]: Finished scheduling [  0.00s]
+15:13:18.510055 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:17:50.927169Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:17:50.927252Z | 12d05436-6157-4727-a967-d9dede452fe3 ====================
+15:17:50.927272 [info ]: Starting dbt LSP server
+15:17:50.927287 [info ]: Connecting to LSP client on port 51903
+15:17:50.927515 [info ]: Successfully connected to LSP client
+15:17:50.927536 [info ]: Creating LSP service...
+15:17:50.990198 [info ]: Creating LSP server...
+15:17:50.990226 [info ]: Starting LSP server...
+15:17:51.474744 [info ]: Loading profiles.yml
+15:17:51.944383 [info ]: Started loading project
+15:17:51.944724 [info ]: Loading profiles.yml
+15:17:51.951607 [debug]:    Started loading packages
+15:17:51.952323 [debug]:     Loaded [  0.00s] packages
+15:17:51.953032 [info ]: Finished loading project [  0.01s]
+15:17:51.953290 [info ]: Started parsing
+15:17:51.982872 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:17:51.982983 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:17:51.983013 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:17:51.984203 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:17:51.984518 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:17:51.984849 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:17:51.985132 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:17:51.985416 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:17:51.985774 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:17:51.986051 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:17:51.990022 [info ]: Finished parsing [  0.04s]
+15:17:51.990297 [info ]: Cached model count updated: 7 models (estimate)
+15:17:51.990310 [info ]: Cached model count updated: 7 models (accurate)
+15:17:51.990345 [info ]: Started scheduling
+15:17:51.990404 [info ]: Finished scheduling [  0.00s]
+15:17:51.990415 [debug]: Compilation - 0 nodes selected: {}
+15:17:51.990442 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:17:51.990462 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:17:51.990475 [info ]: Started scheduling
+15:17:51.990545 [info ]: Finished scheduling [  0.00s]
+15:17:51.990612 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:17:51.990630 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:17:51.990638 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:17:51.997711 [debug]: No platform credentials found, skipping remote license
+15:17:51.998178 [info ]: Started building task graph
+15:17:51.998214 [info ]: Finished building task graph [  0.00s]
+15:17:52.002294 [info ]: Started scheduling
+15:17:52.002345 [info ]: Finished scheduling [  0.00s]
+15:17:52.002631 [info ]: Cached model count updated: 7 models (accurate)
+15:17:55.884657 [info ]: Started loading project
+15:17:55.884906 [info ]: Loading profiles.yml
+15:17:55.902695 [info ]: Cached model count updated: 7 models (estimate)
+15:17:55.902724 [info ]: Cached model count updated: 7 models (accurate)
+15:17:55.902751 [info ]: Started scheduling
+15:17:55.902836 [info ]: Finished scheduling [  0.00s]
+15:17:55.902855 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:17:55.904035 [info ]: Started building task graph
+15:17:55.904139 [info ]: Finished building task graph [  0.00s]
+15:17:55.904627 [info ]: Started rendering (7 nodes)
+15:17:55.904652 [info ]: Started model DBT_DEV.mart_dashboard
+15:17:55.904666 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:17:55.904694 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:17:55.904702 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:17:55.904712 [info ]: Started model DBT_DEV.fct_revenue
+15:17:55.904720 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:17:55.904729 [info ]: Started model DBT_DEV.dim_product
+15:17:55.904736 [debug]: Started rendering model DBT_DEV.dim_product
+15:17:55.904733 [info ]: Finished loading project [  0.02s]
+15:17:55.904745 [info ]: Started model DBT_DEV.stg_product_sales
+15:17:55.904749 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:17:55.904759 [info ]: Started model DBT_DEV.dim_customer
+15:17:55.904767 [debug]: Started rendering model DBT_DEV.dim_customer
+15:17:55.904775 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:17:55.904785 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:17:55.905380 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:17:55.905495 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:17:55.905544 [info ]: Started analyzing (7 nodes)
+15:17:55.905563 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:17:55.905662 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:17:55.905702 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:17:55.905707 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:17:55.905707 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:17:55.905730 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:17:55.905755 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:17:55.905780 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:17:55.905791 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:17:55.905802 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:17:55.905809 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:17:55.905810 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:17:55.905835 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:17:55.905849 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:17:55.905859 [debug]: Started analyzing model DBT_DEV.dim_product
+15:17:55.905873 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:17:55.905883 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:17:55.905899 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:17:55.905908 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:17:55.905921 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:17:55.909933 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:17:55.909958 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+15:17:55.909982 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:17:55.909994 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:17:55.910010 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:17:55.910020 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+15:17:55.910852 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:17:55.910872 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:17:55.910889 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:17:55.910897 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:17:55.912634 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:17:55.912654 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:17:55.913003 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:17:55.913021 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:17:55.913030 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:17:55.916582 [info ]: Started scheduling
+15:17:55.916633 [info ]: Finished scheduling [  0.00s]
+15:17:55.916872 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:38:28.727343Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:38:28.727431Z | 83b50238-2a6e-4172-a242-593584feb51b ====================
+15:38:28.727450 [info ]: Starting dbt LSP server
+15:38:28.727465 [info ]: Connecting to LSP client on port 45849
+15:38:28.727670 [info ]: Successfully connected to LSP client
+15:38:28.727690 [info ]: Creating LSP service...
+15:38:28.789214 [info ]: Creating LSP server...
+15:38:28.789244 [info ]: Starting LSP server...
+15:38:29.465175 [info ]: Loading profiles.yml
+15:38:29.769897 [info ]: Started loading project
+15:38:29.770268 [info ]: Loading profiles.yml
+15:38:29.776596 [debug]:    Started loading packages
+15:38:29.777237 [debug]:     Loaded [  0.00s] packages
+15:38:29.777799 [info ]: Finished loading project [  0.01s]
+15:38:29.778070 [info ]: Started parsing
+15:38:29.806066 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:38:29.806178 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:38:29.806208 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:38:29.807497 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:38:29.807851 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:38:29.808265 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:38:29.808572 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:38:29.808833 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:38:29.809102 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:38:29.809420 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:38:29.813387 [info ]: Finished parsing [  0.04s]
+15:38:29.813603 [info ]: Cached model count updated: 7 models (estimate)
+15:38:29.813618 [info ]: Cached model count updated: 7 models (accurate)
+15:38:29.813659 [info ]: Started scheduling
+15:38:29.813719 [info ]: Finished scheduling [  0.00s]
+15:38:29.813731 [debug]: Compilation - 0 nodes selected: {}
+15:38:29.813765 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:38:29.813781 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:38:29.813825 [info ]: Started scheduling
+15:38:29.813893 [info ]: Finished scheduling [  0.00s]
+15:38:29.813966 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:38:29.813989 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:38:29.814007 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:38:29.820989 [debug]: No platform credentials found, skipping remote license
+15:38:29.821394 [info ]: Started building task graph
+15:38:29.821431 [info ]: Finished building task graph [  0.00s]
+15:38:29.825251 [info ]: Started scheduling
+15:38:29.825303 [info ]: Finished scheduling [  0.00s]
+15:38:29.825572 [info ]: Cached model count updated: 7 models (accurate)
+15:38:33.064641 [info ]: Started loading project
+15:38:33.064977 [info ]: Loading profiles.yml
+15:38:33.089276 [info ]: Cached model count updated: 7 models (estimate)
+15:38:33.089301 [info ]: Cached model count updated: 7 models (accurate)
+15:38:33.089328 [info ]: Started scheduling
+15:38:33.089409 [info ]: Finished scheduling [  0.00s]
+15:38:33.089425 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:38:33.090609 [info ]: Started building task graph
+15:38:33.090699 [info ]: Finished building task graph [  0.00s]
+15:38:33.091278 [info ]: Started rendering (7 nodes)
+15:38:33.091305 [info ]: Started model DBT_DEV.mart_dashboard
+15:38:33.091320 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:38:33.091346 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:38:33.091354 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:38:33.091364 [info ]: Started model DBT_DEV.fct_revenue
+15:38:33.091372 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:38:33.091380 [info ]: Started model DBT_DEV.dim_product
+15:38:33.091387 [debug]: Started rendering model DBT_DEV.dim_product
+15:38:33.091381 [info ]: Finished loading project [  0.03s]
+15:38:33.091396 [info ]: Started model DBT_DEV.stg_product_sales
+15:38:33.091403 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:38:33.091425 [info ]: Started model DBT_DEV.dim_customer
+15:38:33.091432 [debug]: Started rendering model DBT_DEV.dim_customer
+15:38:33.091439 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:38:33.091447 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:38:33.092203 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:38:33.092209 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:38:33.092214 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:38:33.092218 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:38:33.092223 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:38:33.092254 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:38:33.092257 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:38:33.092316 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:38:33.092358 [info ]: Started analyzing (7 nodes)
+15:38:33.092373 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:38:33.092396 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:38:33.092406 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:38:33.092420 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:38:33.092431 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:38:33.092451 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:38:33.092475 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:38:33.092496 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:38:33.092503 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:38:33.092513 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:38:33.092520 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:38:33.092551 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:38:33.092559 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:38:33.092564 [debug]: Started analyzing model DBT_DEV.dim_product
+15:38:33.096660 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:38:33.096683 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:38:33.096700 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:38:33.096708 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_customer_revenue (view)
+15:38:33.096720 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:38:33.096727 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_daily_revenue (view)
+15:38:33.097969 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:38:33.097994 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:38:33.098012 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:38:33.098020 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:38:33.099726 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:38:33.099745 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:38:33.100096 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:38:33.100115 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:38:33.100124 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:38:33.103174 [info ]: Started scheduling
+15:38:33.103219 [info ]: Finished scheduling [  0.00s]
+15:38:33.103518 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:43:41.906701Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:43:41.906787Z | 486ccfa7-1380-441b-9680-d148452af55a ====================
+15:43:41.906806 [info ]: Starting dbt LSP server
+15:43:41.906820 [info ]: Connecting to LSP client on port 45533
+15:43:41.907062 [info ]: Successfully connected to LSP client
+15:43:41.907082 [info ]: Creating LSP service...
+15:43:41.968428 [info ]: Creating LSP server...
+15:43:41.968458 [info ]: Starting LSP server...
+15:43:42.474755 [info ]: Loading profiles.yml
+15:43:42.830347 [info ]: Started loading project
+15:43:42.830682 [info ]: Loading profiles.yml
+15:43:42.837322 [debug]:    Started loading packages
+15:43:42.837996 [debug]:     Loaded [  0.00s] packages
+15:43:42.838605 [info ]: Finished loading project [  0.01s]
+15:43:42.838864 [info ]: Started parsing
+15:43:42.867404 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:43:42.867512 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:43:42.867540 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:43:42.868688 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:43:42.869116 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:43:42.869429 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:43:42.869827 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:43:42.870129 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:43:42.870413 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:43:42.870652 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:43:42.874859 [info ]: Finished parsing [  0.04s]
+15:43:42.875010 [info ]: Cached model count updated: 7 models (estimate)
+15:43:42.875023 [info ]: Cached model count updated: 7 models (accurate)
+15:43:42.875061 [info ]: Started scheduling
+15:43:42.875111 [info ]: Finished scheduling [  0.00s]
+15:43:42.875122 [debug]: Compilation - 0 nodes selected: {}
+15:43:42.875147 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:43:42.875162 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:43:42.875171 [info ]: Started scheduling
+15:43:42.875233 [info ]: Finished scheduling [  0.00s]
+15:43:42.875312 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:43:42.875326 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:43:42.875334 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:43:42.882411 [debug]: No platform credentials found, skipping remote license
+15:43:42.882825 [info ]: Started building task graph
+15:43:42.882859 [info ]: Finished building task graph [  0.00s]
+15:43:42.886757 [info ]: Started scheduling
+15:43:42.886804 [info ]: Finished scheduling [  0.00s]
+15:43:42.887075 [info ]: Cached model count updated: 7 models (accurate)
+15:43:46.094514 [info ]: Started loading project
+15:43:46.094762 [info ]: Loading profiles.yml
+15:43:46.115951 [info ]: Cached model count updated: 7 models (estimate)
+15:43:46.115981 [info ]: Cached model count updated: 7 models (accurate)
+15:43:46.116007 [info ]: Started scheduling
+15:43:46.116091 [info ]: Finished scheduling [  0.00s]
+15:43:46.116109 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:43:46.117234 [info ]: Started building task graph
+15:43:46.117346 [info ]: Finished building task graph [  0.00s]
+15:43:46.117852 [info ]: Started rendering (7 nodes)
+15:43:46.117876 [info ]: Started model DBT_DEV.mart_dashboard
+15:43:46.117889 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:43:46.117923 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:43:46.117932 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:43:46.117942 [info ]: Started model DBT_DEV.fct_revenue
+15:43:46.117952 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:43:46.117962 [info ]: Started model DBT_DEV.dim_product
+15:43:46.117959 [info ]: Finished loading project [  0.02s]
+15:43:46.117971 [debug]: Started rendering model DBT_DEV.dim_product
+15:43:46.117979 [info ]: Started model DBT_DEV.stg_product_sales
+15:43:46.117983 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:43:46.118009 [info ]: Started model DBT_DEV.dim_customer
+15:43:46.118017 [debug]: Started rendering model DBT_DEV.dim_customer
+15:43:46.118040 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:43:46.118049 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:43:46.118750 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:43:46.118863 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:43:46.118918 [info ]: Started analyzing (7 nodes)
+15:43:46.118936 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:43:46.118960 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:43:46.118965 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:43:46.118971 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:43:46.119030 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:43:46.119073 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:43:46.119097 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:43:46.119110 [debug]: Started analyzing model DBT_DEV.dim_product
+15:43:46.119130 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:43:46.119142 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:43:46.119479 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:43:46.119481 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:43:46.119548 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:43:46.119575 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:43:46.119599 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:43:46.119608 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:43:46.119608 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:43:46.119738 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:43:46.119757 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:43:46.119778 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:43:46.123406 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:43:46.123430 [info ]:  Succeeded [  0.00s] model DBT_DEV.stg_customer_revenue (view)
+15:43:46.123478 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:43:46.123489 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+15:43:46.123503 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:43:46.123511 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:43:46.124508 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:43:46.124527 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:43:46.124545 [debug]: Finished analyzing [  0.00s] model DBT_DEV.dim_customer [success]
+15:43:46.124553 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:43:46.126275 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:43:46.126294 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:43:46.126639 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:43:46.126658 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:43:46.126667 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:43:46.129686 [info ]: Started scheduling
+15:43:46.129733 [info ]: Finished scheduling [  0.00s]
+15:43:46.129970 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-06-17T15:51:07.379930Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-17T15:51:07.380018Z | d1d4b637-e845-43d7-b4e3-8a0ee66cc83b ====================
+15:51:07.380038 [info ]: Starting dbt LSP server
+15:51:07.380054 [info ]: Connecting to LSP client on port 42579
+15:51:07.380280 [info ]: Successfully connected to LSP client
+15:51:07.380301 [info ]: Creating LSP service...
+15:51:07.444379 [info ]: Creating LSP server...
+15:51:07.444408 [info ]: Starting LSP server...
+15:51:07.954813 [info ]: Loading profiles.yml
+15:51:08.344265 [info ]: Started loading project
+15:51:08.344608 [info ]: Loading profiles.yml
+15:51:08.350952 [debug]:    Started loading packages
+15:51:08.351592 [debug]:     Loaded [  0.00s] packages
+15:51:08.352176 [info ]: Finished loading project [  0.01s]
+15:51:08.352452 [info ]: Started parsing
+15:51:08.380555 [debug]: Finished parsing models/schema.yml [  0.00s]
+15:51:08.380668 [debug]: Finished parsing models/sources.yml [  0.00s]
+15:51:08.380696 [debug]: Finished parsing tests/generic_tests.yml [  0.00s]
+15:51:08.381966 [debug]: Finished parsing models/marts/dim_customer.sql [  0.00s]
+15:51:08.382339 [debug]: Finished parsing models/marts/dim_product.sql [  0.00s]
+15:51:08.382688 [debug]: Finished parsing models/marts/fct_revenue.sql [  0.00s]
+15:51:08.383061 [debug]: Finished parsing models/marts/mart_dashboard.sql [  0.00s]
+15:51:08.383332 [debug]: Finished parsing models/staging/stg_customer_revenue.sql [  0.00s]
+15:51:08.383632 [debug]: Finished parsing models/staging/stg_daily_revenue.sql [  0.00s]
+15:51:08.383938 [debug]: Finished parsing models/staging/stg_product_sales.sql [  0.00s]
+15:51:08.388188 [info ]: Finished parsing [  0.04s]
+15:51:08.388341 [info ]: Cached model count updated: 7 models (estimate)
+15:51:08.388353 [info ]: Cached model count updated: 7 models (accurate)
+15:51:08.388392 [info ]: Started scheduling
+15:51:08.388461 [info ]: Finished scheduling [  0.00s]
+15:51:08.388472 [debug]: Compilation - 0 nodes selected: {}
+15:51:08.388496 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:51:08.388512 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:51:08.388518 [info ]: Started scheduling
+15:51:08.388581 [info ]: Finished scheduling [  0.00s]
+15:51:08.388655 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "CUSTOMER_REVENUE" }) and interval: None
+15:51:08.388670 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "PRODUCT_SALES" }) and interval: None
+15:51:08.388678 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ECOMMERCE_DB", schema: "PUBLIC", table: "DAILY_REVENUE" }) and interval: None
+15:51:08.395842 [debug]: No platform credentials found, skipping remote license
+15:51:08.396283 [info ]: Started building task graph
+15:51:08.396320 [info ]: Finished building task graph [  0.00s]
+15:51:08.400367 [info ]: Started scheduling
+15:51:08.400418 [info ]: Finished scheduling [  0.00s]
+15:51:08.400698 [info ]: Cached model count updated: 7 models (accurate)
+15:51:11.584693 [info ]: Started loading project
+15:51:11.584931 [info ]: Loading profiles.yml
+15:51:11.605866 [info ]: Cached model count updated: 7 models (estimate)
+15:51:11.605895 [info ]: Cached model count updated: 7 models (accurate)
+15:51:11.605922 [info ]: Started scheduling
+15:51:11.606009 [info ]: Finished scheduling [  0.00s]
+15:51:11.606035 [debug]: Compilation - 7 nodes selected: {"model.ecommerce_dbt.dim_customer", "model.ecommerce_dbt.dim_product", "model.ecommerce_dbt.fct_revenue", "model.ecommerce_dbt.mart_dashboard", "model.ecommerce_dbt.stg_customer_revenue", "model.ecommerce_dbt.stg_daily_revenue", "model.ecommerce_dbt.stg_product_sales"}
+15:51:11.607263 [info ]: Started building task graph
+15:51:11.607361 [info ]: Finished building task graph [  0.00s]
+15:51:11.607849 [info ]: Started rendering (7 nodes)
+15:51:11.607876 [info ]: Started model DBT_DEV.mart_dashboard
+15:51:11.607889 [debug]: Started rendering model DBT_DEV.mart_dashboard
+15:51:11.607919 [info ]: Started model DBT_DEV.stg_daily_revenue
+15:51:11.607928 [debug]: Started rendering model DBT_DEV.stg_daily_revenue
+15:51:11.607937 [info ]: Started model DBT_DEV.fct_revenue
+15:51:11.607945 [debug]: Started rendering model DBT_DEV.fct_revenue
+15:51:11.607954 [info ]: Started model DBT_DEV.dim_product
+15:51:11.607962 [debug]: Started rendering model DBT_DEV.dim_product
+15:51:11.607957 [info ]: Finished loading project [  0.02s]
+15:51:11.607970 [info ]: Started model DBT_DEV.stg_product_sales
+15:51:11.607975 [debug]: Started rendering model DBT_DEV.stg_product_sales
+15:51:11.607984 [info ]: Started model DBT_DEV.dim_customer
+15:51:11.607996 [debug]: Started rendering model DBT_DEV.dim_customer
+15:51:11.608004 [info ]: Started model DBT_DEV.stg_customer_revenue
+15:51:11.608009 [debug]: Started rendering model DBT_DEV.stg_customer_revenue
+15:51:11.608679 [debug]: Compiled SQL for node model.ecommerce_dbt.mart_dashboard at target/.lsp/compiled/ecommerce_dbt/models/marts/mart_dashboard.sql
+15:51:11.608782 [debug]: Finished rendering [  0.00s] model DBT_DEV.mart_dashboard [success]
+15:51:11.608825 [info ]: Started analyzing (7 nodes)
+15:51:11.608841 [debug]: Started analyzing model DBT_DEV.mart_dashboard
+15:51:11.608938 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_product at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_product.sql
+15:51:11.608967 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_daily_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_daily_revenue.sql
+15:51:11.608987 [debug]: Compiled SQL for node model.ecommerce_dbt.dim_customer at target/.lsp/compiled/ecommerce_dbt/models/marts/dim_customer.sql
+15:51:11.608989 [debug]: Compiled SQL for node model.ecommerce_dbt.fct_revenue at target/.lsp/compiled/ecommerce_dbt/models/marts/fct_revenue.sql
+15:51:11.608999 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_customer_revenue at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_customer_revenue.sql
+15:51:11.609011 [debug]: Compiled SQL for node model.ecommerce_dbt.stg_product_sales at target/.lsp/compiled/ecommerce_dbt/models/staging/stg_product_sales.sql
+15:51:11.609011 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_product [success]
+15:51:11.609035 [debug]: Started analyzing model DBT_DEV.dim_product
+15:51:11.609060 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:51:11.609072 [debug]: Started analyzing model DBT_DEV.stg_daily_revenue
+15:51:11.609092 [debug]: Finished rendering [  0.00s] model DBT_DEV.dim_customer [success]
+15:51:11.609102 [debug]: Started analyzing model DBT_DEV.dim_customer
+15:51:11.609135 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:51:11.609145 [debug]: Started analyzing model DBT_DEV.stg_product_sales
+15:51:11.609162 [debug]: Finished rendering [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:51:11.609172 [debug]: Started analyzing model DBT_DEV.stg_customer_revenue
+15:51:11.609186 [debug]: Finished rendering [  0.00s] model DBT_DEV.fct_revenue [success]
+15:51:11.609194 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+15:51:11.609201 [debug]: Started analyzing model DBT_DEV.fct_revenue
+15:51:11.613355 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_daily_revenue [success]
+15:51:11.613380 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_daily_revenue (view)
+15:51:11.613402 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_customer_revenue [success]
+15:51:11.613410 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_customer_revenue (view)
+15:51:11.613423 [debug]: Finished analyzing [  0.00s] model DBT_DEV.stg_product_sales [success]
+15:51:11.613430 [info ]:  Succeeded [  0.01s] model DBT_DEV.stg_product_sales (view)
+15:51:11.614564 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_product [success]
+15:51:11.614587 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_product (table)
+15:51:11.614606 [debug]: Finished analyzing [  0.01s] model DBT_DEV.dim_customer [success]
+15:51:11.614615 [info ]:  Succeeded [  0.01s] model DBT_DEV.dim_customer (table)
+15:51:11.616366 [debug]: Finished analyzing [  0.01s] model DBT_DEV.fct_revenue [success]
+15:51:11.616388 [info ]:  Succeeded [  0.01s] model DBT_DEV.fct_revenue (table)
+15:51:11.616715 [debug]: Finished analyzing [  0.01s] model DBT_DEV.mart_dashboard [success]
+15:51:11.616733 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+15:51:11.616743 [info ]:  Succeeded [  0.01s] model DBT_DEV.mart_dashboard (table)
+15:51:11.619911 [info ]: Started scheduling
+15:51:11.619957 [info ]: Finished scheduling [  0.00s]
+15:51:11.620225 [info ]: Cached model count updated: 7 models (accurate)

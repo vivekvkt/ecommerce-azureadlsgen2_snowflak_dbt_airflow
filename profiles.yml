@@ -1,0 +1,18 @@
+user:
+  outputs:
+    default:
+      account: QYTYJGU-WH59583
+      auth_type: password
+      client_session_keep_alive: false
+      connect_retries: 3
+      connect_timeout: 30
+      database: ECOMMERCE_DB
+      password: Tiktokvivektiwari@1234
+      retry_on_database_errors: true
+      role: null
+      schema: DBT_DEV
+      threads: 6
+      type: snowflake
+      user: SNOWDREAM
+      warehouse: COMPUTE_WH
+  target: default
