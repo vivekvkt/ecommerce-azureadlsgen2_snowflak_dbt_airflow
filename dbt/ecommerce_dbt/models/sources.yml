@@ -13,3 +13,4 @@ sources:
       - name: CUSTOMER_REVENUE_V2
       - name: PRODUCT_SALES_V2
       - name: DAILY_REVENUE_V2
+      - name: SALES_ANALYTICS
