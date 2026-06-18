@@ -61,3 +61,26 @@ display(
         LIMIT 10
     """)
 )
+
+
+df_gold = spark.table("ecommerce_gold.sales_analytics")
+
+df_gold.show(5)
+df_gold.count()
+
+snowflake_options = {
+  "host": "snowflakecomputing.com",
+  "port": 443,
+  "sfUser": "snowDream",
+  "sfPassword":  "1234",
+  "sfDatabase": "ECOMMERCE_DB",
+  "sfSchema": "PUBLIC",
+  "sfWarehouse": "COMPUTE_WH"
+}
+
+df_gold.write \
+    .format("snowflake") \
+    .options(**snowflake_options) \
+    .option("dbtable", "SALES_ANALYTICS") \
+    .mode("overwrite") \
+    .save()
