@@ -1314,7 +1314,8 @@ GROUP BY customer_id
 dbt focuses on analytics and reporting.
 
 In Your Project
-Databricks Role
+Databricks Role:
+```text
 Raw CSV
     ↓
 Bronze
@@ -1322,7 +1323,7 @@ Bronze
 Silver
     ↓
 Gold
-
+```
 Example tasks:
 
 Remove duplicates
@@ -1346,7 +1347,9 @@ Create business models
 Define KPIs
 Build marts
 Data testing
-Real Company Architecture
+
+Real Company Architecture:
+```text
 ADLS
   ↓
 Databricks
@@ -1356,6 +1359,7 @@ Snowflake
 dbt
   ↓
 Power BI
+```
 Why Both?
 
 Databricks:
@@ -1411,6 +1415,7 @@ dbt        = Analytics Modeling Layer
 
 In your project:
 
+```text
 ADLS
  ↓
 Databricks  (Clean & Transform Data)
@@ -1422,3 +1427,4 @@ dbt         (Build Business Models)
 MART_AI_DASHBOARD
  ↓
 Streamlit Chatbot
+```
