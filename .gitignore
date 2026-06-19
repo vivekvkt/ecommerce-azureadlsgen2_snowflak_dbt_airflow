@@ -13,6 +13,7 @@ __pycache__/
 
 # Streamlit
 .streamlit/
+.airflow_env
 
 # VS Code
 .vscode/
@@ -20,3 +21,27 @@ __pycache__/
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Virtual Environments
+env/
+venv/
+airflow/airflow_env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Streamlit
+.streamlit/
+
+# Airflow
+airflow/logs/
+airflow/airflow.cfg
+airflow/airflow.db
+
+# IDE Files
+.vscode/
+.idea/
