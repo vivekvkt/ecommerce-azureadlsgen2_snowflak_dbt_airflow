@@ -539,6 +539,7 @@ Business Answer
 
 ## 📊 🏗️ Complete Architecture
 
+```text
 +-------------------+
 | Source CSV Files  |
 +-------------------+
@@ -586,11 +587,13 @@ Business Answer
 +-------------------+
 | Streamlit UI      |
 +-------------------+
+```
 
 Airflow orchestrates the complete workflow
 
 ## 📊 📂 Repository Structure
 
+```text
 ecommerce-platform/
 │
 ├── databricks/
@@ -619,7 +622,7 @@ ecommerce-platform/
 ├── README.md
 │
 └── .gitignore
-
+```
 
 ## 📊 🔄 End-to-End Data Flow
 
@@ -711,7 +714,9 @@ PAYMENT_STATUS
 
 ## 📊 Allow users to ask business questions using natural language.
 
+
 Example:
+```text
 
 total sales
 Chatbot Flow
@@ -728,6 +733,8 @@ Business Logic
       |
       v
 SQL + Answer
+
+```
 Supported Questions
 Total Sales
 total sales
@@ -806,6 +813,7 @@ With Airflow:
 
 Scheduled execution
 Workflow
+```text
 Databricks
      |
      v
@@ -819,6 +827,8 @@ dbt Test
      |
      v
 Refresh MART_AI_DASHBOARD
+```
+
 DAG Design
 databricks_job
  >> snowflake_load
@@ -919,6 +929,9 @@ Developed an end-to-end Analytics Chatbot using Azure Data Lake Gen2, Databricks
 Q1. Explain the End-to-End Architecture of Your Project.
 
 Answer
+
+```text
+
 Source Files
     ↓
 ADLS Gen2
@@ -936,6 +949,7 @@ Python Chatbot
     ↓
 Streamlit UI
 
+```
 Airflow orchestrates the complete workflow.
 
 ## 📊 Azure Data Lake Gen2
@@ -967,6 +981,8 @@ Answer
 
 Databricks was used for:
 
+```text
+
 Raw Data
    ↓
 Bronze
@@ -975,6 +991,7 @@ Silver
    ↓
 Gold
 
+```
 Benefits:
 
 Spark Engine
@@ -1084,7 +1101,10 @@ Documentation
 Testing
 
 Q14. Explain dbt Layers.
+
 Answer
+
+```text
 Source
  ↓
 Staging
@@ -1095,6 +1115,7 @@ Facts
  ↓
 Marts
 
+```
 Q15. What dbt models did you create?
 Answer
 
@@ -1132,6 +1153,7 @@ Answer
 
 Airflow orchestrates:
 
+```text
 Databricks
  ↓
 Snowflake
@@ -1142,6 +1164,7 @@ dbt Test
  ↓
 Refresh Dashboard
 
+```
 Q19. What is a DAG?
 Answer
 
@@ -1158,6 +1181,7 @@ Web Server
 Executor
 DAG
 Operators
+
 Q21. What Operators Did You Use?
 Answer
 BashOperator
@@ -1170,6 +1194,7 @@ Answer
 
 Workflow:
 
+```text
 User Question
       ↓
 chatbot.py
@@ -1180,6 +1205,7 @@ Business Logic
       ↓
 Answer
 
+```
 Q23. Why use Pandas?
 Answer
 
@@ -1204,6 +1230,7 @@ Provides:
 Fast UI development
 Browser-based access
 Interactive analytics
+
 Q26. How do you run Streamlit?
 streamlit run streamlit_app.py
 Project-Specific Questions
@@ -1211,6 +1238,7 @@ Project-Specific Questions
 Q27. What table does the chatbot use?
 Answer
 DBT_DEV.MART_AI_DASHBOARD
+
 Q28. Why create MART_AI_DASHBOARD?
 Answer
 
@@ -1230,21 +1258,18 @@ Answer
 
 Built an end-to-end analytics platform using ADLS Gen2, Databricks, Snowflake, dbt, Airflow, Python and Streamlit. Data is ingested into ADLS, transformed in Databricks, loaded into Snowflake, modeled through dbt, orchestrated by Airflow and exposed through a Streamlit chatbot that provides business insights and displays SQL queries for transparency.
 
-Databricks vs dbt
-Feature	Databricks	dbt
-Purpose	Data Processing Platform	Data Transformation Tool
-Language	PySpark, SQL, Python, Scala	SQL + Jinja
-Compute Engine	Apache Spark	Uses warehouse compute
-Handles Large Data	Yes (TBs/PBs)	Depends on warehouse
-ETL	Full ETL	Mainly ELT
-Machine Learning	Yes	No
-Streaming	Yes	No
-Data Quality	Possible	Built-in tests
-Orchestration	Jobs/Workflows	Needs Airflow/dbt Cloud
-Best For	Complex transformations	Analytics modeling
-Simple Explanation
-Databricks
-
+| Feature | Databricks | dbt |
+|----------|------------|-----|
+| Purpose | Data Processing Platform | Data Transformation Tool |
+| Language | PySpark, SQL, Python, Scala | SQL + Jinja |
+| Compute Engine | Apache Spark | Uses Data Warehouse Compute |
+| Handles Large Data | ✅ Yes (TBs/PBs) | ⚠️ Depends on Warehouse |
+| ETL | Full ETL | Mainly ELT |
+| Machine Learning | ✅ Yes | ❌ No |
+| Streaming | ✅ Yes | ❌ No |
+| Data Quality | Possible | Built-in Tests |
+| Orchestration | Jobs / Workflows | Airflow or dbt Cloud |
+| Best For | Complex Transformations | Analytics Modeling |
 Think of Databricks as a factory.
 
 It can:
