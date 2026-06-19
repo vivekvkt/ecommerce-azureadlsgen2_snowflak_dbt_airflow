@@ -82,6 +82,95 @@ M --> G
 
 ---
 
+Final Architecture
+## 🏗️ Complete Architecture
+
+```text
+Source CSV Files
+        │
+        ▼
+Azure Data Factory (ADF)
+(Copy Activity)
+        │
+        ▼
+ADLS Gen2
+(Raw Zone)
+        │
+        ▼
+Azure Databricks
+(Bronze → Silver → Gold)
+        │
+        ▼
+Snowflake
+(Curated Tables)
+        │
+        ▼
+dbt
+(Staging → Dimensions → Facts → Marts)
+        │
+        ▼
+MART_AI_DASHBOARD
+        │
+        ▼
+Python Analytics Chatbot
+        │
+        ▼
+Streamlit UI
+
+──────────────────────────────
+
+Airflow Orchestration
+
+Databricks
+      ↓
+Snowflake Load
+      ↓
+dbt Run
+      ↓
+dbt Test
+      ↓
+Refresh MART_AI_DASHBOARD
+```
+# Technology Stack update
+```text
+| Layer          | Technology         |
+| -------------- | ------------------ |
+| Ingestion      | Azure Data Factory |
+| Storage        | ADLS Gen2          |
+| Processing     | Azure Databricks   |
+| Data Warehouse | Snowflake          |
+| Transformation | dbt                |
+| Orchestration  | Apache Airflow     |
+| Backend        | Python             |
+| Frontend       | Streamlit          |
+
+```
+
+# Project Flow Explanation
+```text
+ADF
+ ↓
+ADLS Gen2
+ ↓
+Databricks
+ ↓
+Snowflake
+ ↓
+dbt
+ ↓
+MART_AI_DASHBOARD
+ ↓
+Python Chatbot
+ ↓
+Streamlit
+
+```
+
+Source files are ingested using Azure Data Factory into ADLS Gen2. Azure Databricks processes the data through Bronze, Silver, and Gold layers. Curated datasets are loaded into Snowflake. dbt creates dimensions, facts, and MART_AI_DASHBOARD. Apache Airflow orchestrates the workflow. A Python-based analytics chatbot reads data from MART_AI_DASHBOARD and exposes insights through a Streamlit UI.
+
+Note:
+ADF is included in the architecture as the ingestion layer to represent a production-grade Azure Data Engineering solution. Current implementation uses manually uploaded files, but can be extended with ADF Copy Activities and scheduled triggers.
+
 # 📂 Repository Structure
 
 ```text
