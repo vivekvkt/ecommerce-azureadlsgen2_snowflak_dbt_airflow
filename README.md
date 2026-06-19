@@ -1,6 +1,517 @@
+# 🚀 E-Commerce Analytics Chatbot Project
+
+## 📌 Project Overview
+
+This project demonstrates an end-to-end Data Engineering and Analytics platform using Azure Data Lake Storage Gen2 (ADLS), Azure Databricks, Snowflake, dbt, Apache Airflow, Python, and Streamlit.
+
+The final solution is an Analytics Chatbot that enables business users to ask natural language questions and receive analytics insights directly from Snowflake.
+
+### Sample Questions
+
+* Total Sales
+* Top Customer
+* Top Product
+* Total Orders
+* Completed Orders
+* City Wise Sales
+
+### Chatbot Output
+
+The chatbot displays:
+
+* User Question
+* SQL Query Used
+* Business Answer
+
+---
+
+# ⭐ Project Highlights
+
+* End-to-End Data Engineering Pipeline
+* ADLS Gen2 → Databricks → Snowflake → dbt
+* Streamlit Analytics Chatbot
+* Airflow Orchestration
+* SQL Transparency
+* Snowflake Analytics Mart
+* GitHub Version Controlled
+* Interview Ready Project
+
+---
+
+# 🏗️ Architecture
+
+```mermaid
+flowchart TD
+
+A[Source CSV Files]
+--> B[ADLS Gen2 Raw Zone]
+
+B --> C[Databricks Bronze Layer]
+C --> D[Databricks Silver Layer]
+D --> E[Databricks Gold Layer]
+
+E --> F[Snowflake Curated Tables]
+
+F --> G[dbt Staging Models]
+G --> H[dbt Dimension Models]
+H --> I[dbt Fact Models]
+I --> J[MART_AI_DASHBOARD]
+
+J --> K[Python Analytics Chatbot]
+K --> L[Streamlit UI]
+
+M[Airflow Orchestration] --> C
+M --> F
+M --> G
+```
+
+---
+
+# 🛠️ Technology Stack
+
+| Layer           | Technology                   |
+| --------------- | ---------------------------- |
+| Storage         | Azure Data Lake Storage Gen2 |
+| Processing      | Azure Databricks             |
+| Data Warehouse  | Snowflake                    |
+| Transformation  | dbt                          |
+| Orchestration   | Apache Airflow               |
+| Backend         | Python                       |
+| Frontend        | Streamlit                    |
+| Version Control | Git & GitHub                 |
+
+---
+
+# 📂 Repository Structure
+
+```text
+ecommerce-platform/
+│
+├── databricks/
+│
+├── snowflake/
+│
+├── airflow/
+│   └── dags/
+│       └── ecommerce_pipeline.py
+│
+├── dbt/
+│   └── ecommerce_dbt/
+│
+├── powerbi/
+│
+├── ai-chatbot/
+│   ├── app.py
+│   ├── chatbot.py
+│   ├── snowflake_connection.py
+│   ├── streamlit_app.py
+│   ├── execute_query.py
+│   ├── text_to_sql.py
+│   ├── requirements.txt
+│   └── .env
+│
+├── screenshots/
+│
+├── README.md
+│
+└── .gitignore
+```
+
+---
+
+# 📸 Application Screenshots
+
+## Top Sales Dashboard
+
+<p align="center">
+  <img src="streamlit_dashboard.PNG" width="900">
+</p>
+
+## Top Customers Dashboard
+
+<p align="center">
+  <img src="top_customers.PNG" width="900">
+</p>
+
+---
+
+# 🔄 End-to-End Data Flow
+
+## Step 1: Data Ingestion
+
+Raw CSV files are uploaded to Azure Data Lake Storage Gen2.
+
+Example files:
+
+```text
+orders.csv
+customers.csv
+products.csv
+payments.csv
+```
+
+---
+
+## Step 2: Databricks Processing
+
+Databricks performs Bronze, Silver, and Gold transformations.
+
+### Bronze Layer
+
+* Raw data ingestion
+
+### Silver Layer
+
+* Null handling
+* Duplicate removal
+* Data validation
+* Data standardization
+
+### Gold Layer
+
+* Business-ready datasets
+* Optimized for analytics
+
+---
+
+## Step 3: Snowflake Loading
+
+Curated datasets are loaded into Snowflake.
+
+Example:
+
+```sql
+COPY INTO SALES_FACT
+FROM @stage
+FILE_FORMAT=(TYPE='CSV');
+```
+
+---
+
+## Step 4: dbt Transformations
+
+dbt creates:
+
+### Staging Models
+
+```text
+stg_orders
+stg_customers
+stg_products
+```
+
+### Dimension Models
+
+```text
+dim_customer
+dim_product
+dim_date
+```
+
+### Fact Models
+
+```text
+fact_orders
+```
+
+### Mart Models
+
+```text
+MART_AI_DASHBOARD
+```
+
+---
+
+# 📊 MART_AI_DASHBOARD
+
+The chatbot reads data from:
+
+```sql
+SELECT *
+FROM DBT_DEV.MART_AI_DASHBOARD;
+```
+
+### Sample Columns
+
+| Column         |
+| -------------- |
+| ORDER_ID       |
+| ORDER_DATE     |
+| CUSTOMER_NAME  |
+| CITY           |
+| COUNTRY        |
+| PRODUCT_NAME   |
+| CATEGORY       |
+| TOTAL_AMOUNT   |
+| PAYMENT_STATUS |
+
+---
+
+# 🤖 Analytics Chatbot
+
+## Chatbot Flow
+
+```text
+User Question
+      ↓
+chatbot.py
+      ↓
+Snowflake Query
+      ↓
+Business Logic
+      ↓
+SQL + Answer
+```
+
+---
+
+## Supported Questions
+
+### Total Sales
+
+```text
+total sales
+```
+
+### Top Customer
+
+```text
+top customer
+```
+
+### Top Product
+
+```text
+top product
+```
+
+### Total Orders
+
+```text
+total orders
+```
+
+### Completed Orders
+
+```text
+completed orders
+```
+
+### City Wise Sales
+
+```text
+city wise sales
+```
+
+---
+
+# 🖥️ Streamlit Implementation
+
+## Why Streamlit?
+
+* Free
+* Fast Development
+* Interactive UI
+* Easy Demonstrations
+
+### Installation
+
+```bash
+pip install streamlit
+```
+
+### Run
+
+```bash
+streamlit run streamlit_app.py
+```
+
+### Output
+
+* Question
+* SQL Query
+* Business Answer
+
+---
+
+# ⚙️ Airflow Implementation
+
+## Why Airflow?
+
+Without Airflow:
+
+```text
+Manual Execution
+```
+
+With Airflow:
+
+```text
+Scheduled Execution
+```
+
+### Workflow
+
+```text
+Databricks
+     ↓
+Snowflake Load
+     ↓
+dbt Run
+     ↓
+dbt Test
+     ↓
+Refresh MART_AI_DASHBOARD
+```
+
+### DAG Flow
+
+```python
+databricks_job
+ >> snowflake_load
+ >> dbt_run
+ >> dbt_test
+ >> refresh_dashboard
+```
+
+### Benefits
+
+* Scheduling
+* Monitoring
+* Dependency Management
+* Retry Mechanism
+* Production Readiness
+
+---
+
+# ▶️ How To Run Project
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+## Create Virtual Environment
+
+```bash
+python -m venv env
+```
+
+## Activate Environment
+
+```bash
+env\Scripts\activate
+```
+
+## Install Packages
+
+```bash
+pip install -r requirements.txt
+```
+
+## Configure Snowflake Credentials
+
+```env
+USER=
+PASSWORD=
+ACCOUNT=
+WAREHOUSE=
+DATABASE=
+SCHEMA=
+```
+
+## Verify Connection
+
+```bash
+python snowflake_connection.py
+```
+
+## Run Streamlit
+
+```bash
+streamlit run streamlit_app.py
+```
+
+## Open Browser
+
+```text
+http://localhost:8501
+```
+
+---
+
+# 🧪 Sample Questions
+
+```text
+total sales
+top customer
+top product
+total orders
+completed orders
+city wise sales
+```
+
+---
+
+# 💼 Interview Explanation
+
+Built an end-to-end analytics platform using ADLS Gen2, Databricks, Snowflake, dbt, Airflow, Python, and Streamlit.
+
+Data is ingested into ADLS, transformed in Databricks, loaded into Snowflake, modeled through dbt, orchestrated by Airflow, and exposed through a Streamlit chatbot that provides business insights and displays SQL queries for transparency.
+
+---
+
+# 🎯 Interview Preparation
+
+Topics covered in this project:
+
+* Azure Data Lake Gen2
+* Databricks
+* Snowflake
+* dbt
+* Airflow
+* Python
+* Streamlit
+* Data Warehousing
+* ETL vs ELT
+* Bronze / Silver / Gold Architecture
+* Snowflake Time Travel
+* Zero Copy Cloning
+* Incremental Loading
+* Data Modeling
+
+---
+
+# 🚀 Future Enhancements
+
+* Dynamic Text-to-SQL
+* Azure OpenAI Integration
+* RAG Implementation
+* Streamlit Visualizations
+* Power BI Dashboards
+* Docker Deployment
+* CI/CD Pipeline
+* Azure App Service Deployment
+
+---
+
+# 🏆 Key Learnings
+
+* Data Lake Architecture
+* Distributed Data Processing
+* Cloud Data Warehousing
+* Analytics Engineering with dbt
+* Workflow Orchestration
+* Python Development
+* Dashboard Development
+* End-to-End Data Engineering Best Practices
+
+
+
 ## 📊  🚀 E-Commerce Analytics Chatbot Project
 
-## 📊 📌 Project Overview
+# 📊 📌 Project Overview
 
 This project demonstrates an end-to-end Data Engineering and Analytics platform using:
 
