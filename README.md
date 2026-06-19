@@ -370,3 +370,15 @@ Developed an end-to-end Analytics Chatbot using Azure Data Lake Gen2, Databricks
 
 🚀 Future Enhancements
 ![Chatbot Demo](https://raw.githubusercontent.com/<username>/<repo-name>/main/screenshots/total_sales.png)
+
+## 📊 TOP SALES Dashboard
+
+<p align="center">
+  <img src="https://github.com/vivekvkt/ecommerce-azureadlsgen2_snowflak_dbt_airflow/blob/main/streamlit_dashboard.PNG" width="900">
+</p>
+
+## 📊 TOP CUSTOMERS Dashboard
+
+<p align="center">
+  <img src="https://github.com/vivekvkt/ecommerce-azureadlsgen2_snowflak_dbt_airflow/blob/main/top_customers.PNG" width="900">
+</p>
