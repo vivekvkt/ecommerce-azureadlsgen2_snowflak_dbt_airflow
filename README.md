@@ -74,7 +74,24 @@ ecommerce-platform/
         │   │
         │   └── schema.yml
         │
-        └── tests/
-            ├── customer_tests.yml
-            ├── revenue_tests.yml
-            └── product_tests.yml
+    
+
+ecommerce-platform/
+│
+├── databricks/
+├── snowflake/
+├── airflow/
+├── azure-devops/
+├── dbt/
+├── powerbi/
+│
+├── ai-chatbot/
+│   ├── app.py
+│   ├── snowflake_connection.py
+│   ├── execute_query.py
+│   ├── openai_client.py
+│   ├── text_to_sql.py
+│   ├── requirements.txt
+│   └── .env
+│
+└── README.md
