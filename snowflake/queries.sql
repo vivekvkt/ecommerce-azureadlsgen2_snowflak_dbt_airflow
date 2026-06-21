@@ -49,3 +49,33 @@ select * from sales_analytics
 
 SELECT COUNT(*)
 FROM ECOMMERCE_DB.PUBLIC.SALES_ANALYTICS;
+
+
+
+CREATE OR REPLACE TABLE DBT_DEV.MART_AI_DASHBOARD AS
+SELECT
+SEQ4() + 1000 AS ORDER_ID,
+DATEADD(
+    DAY,
+    UNIFORM(0,364,RANDOM()),
+    TO_DATE('2024-01-01')
+) AS ORDER_DATE,
+
+UNIFORM(1,100,RANDOM()) AS CUSTOMER_ID,
+
+ARRAY_CONSTRUCT(
+    'Rahul Sharma','Priya Singh','Amit Kumar','Neha Verma',
+    'Vivek Tiwari','Anjali Gupta','Rohit Agarwal','Pooja Mishra',
+    'Sandeep Yadav','Kavita Sharma','Arjun Patel','Payal Verma',
+    'Deepak Singh','Shreya Gupta','Abhishek Kumar','Nidhi Sharma',
+    'Rakesh Jain','Sneha Patel','Manish Verma','Swati Singh'
+)[UNIFORM(0,19,RANDOM())]::STRING AS CUSTOMER_NAME,
+
+ARRAY_CONSTRUCT(
+    'Delhi','Mumbai','Bangalore','Hyderabad',
+    'Chennai','Pune','Kolkata','Noida'
+)[UNIFORM(0,7,RANDOM())]::STRING AS CITY,
+
+'India' AS COUNTRY,
+
+UNIFORM(101,120,RANDOM()) AS PRODUCT_ID,
